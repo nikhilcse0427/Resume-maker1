@@ -19,7 +19,7 @@ const SignUp = ({ setCurrentPage }) => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     if (!fullName) {
       setError('Please enter full name.');
       setIsLoading(false);
@@ -65,7 +65,7 @@ const SignUp = ({ setCurrentPage }) => {
         <h3 className="text-xl font-bold text-blue-900 mb-1">Create Account</h3>
         <p className="text-sm text-blue-700/80">Join thousands of professionals today</p>
       </div>
-      
+
       <form onSubmit={handleSignUp} className="space-y-4">
         <div className="space-y-3">
           <Input
@@ -75,7 +75,7 @@ const SignUp = ({ setCurrentPage }) => {
             placeholder="John Doe"
             type="text"
           />
-          
+
           <Input
             value={email}
             onChange={({ target }) => setEmail(target.value)}
@@ -83,7 +83,7 @@ const SignUp = ({ setCurrentPage }) => {
             placeholder="email@example.com"
             type="email"
           />
-          
+
           <Input
             value={password}
             onChange={({ target }) => setPassword(target.value)}
@@ -102,9 +102,8 @@ const SignUp = ({ setCurrentPage }) => {
         <button
           type="submit"
           disabled={isLoading}
-          className={`w-full py-3 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-200 text-sm ${
-            isLoading ? 'opacity-90 cursor-not-allowed' : ''
-          }`}
+          className={`w-full py-3 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-md transition-all duration-200 text-sm ${isLoading ? 'opacity-90 cursor-not-allowed' : ''
+            }`}
         >
           {isLoading ? (
             <>
