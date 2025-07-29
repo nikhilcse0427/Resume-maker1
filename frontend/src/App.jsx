@@ -6,7 +6,7 @@ import Login from "./components/Login"
 import SignUp from "./components/SignUp"
 import Dashboard from "./pages/Dashboard"
 import EditResume from "./components/EditResume"
-import UserProvider from './context/userContext';
+import UserProvider from './context/userContext'
 const App = () => {
   return (
     <UserProvider>
